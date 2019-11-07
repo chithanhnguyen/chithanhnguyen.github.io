@@ -1,0 +1,54 @@
+body {font-family: "Montserrat",sans-serif;font-weight: normal;line-height: 1.5em;color: #868686;background: #f0f0f0;}
+h1 {font-family: "Poppins",sans-serif;font-size: 3rem;font-weight: bold;color: #f3777d;}
+h6 {font-family: "Poppins",sans-serif;font-size: 1.5rem;font-weight: 500;color: #f3777d;}
+button.cta {font-family: "Poppins",Sans-serif;font-size: 1em;font-weight: 600;color: #fff;background-color: #f3777d;border-radius: 1px;padding: 15px 45px 15px 45px;transition: all .3s;box-sizing: border-box;border: none;}
+button.cta:hover {transform: scale(1.05);background-color: #ff565f;box-shadow: 0px 0px 25px 0px rgba(242,72,81,.2);}
+button.cta:active {transform: scale(.95);background-color: #c4272f;}
+ol, ol li {margin-left: 0;padding-left: 0;}
+ol {margin-left: 1.3em;}
+homesection {display: flex;align-items: center;min-height: 100vh;padding: 5em;}
+hr {margin: 0;}
+#home, #aboutme {background: white;background-image: url("../thanhnguyen/img/background.png");background-repeat: no-repeat;background-position: left top;background-size: auto 100vh;background-attachment: fixed;}
+#portfolio {background-color: black;background-image: url("../thanhnguyen/img/background_blurred.png");background-repeat: no-repeat;background-position: left top;background-size: auto 100vh;background-attachment: fixed;}
+.overlay {position: fixed;z-index: 10;}
+.social-icons {left: 0%;top: 0%;}
+.icon-button {cursor: pointer;display: inline-block;font-size: 2rem;height: 3rem;line-height: 3rem;text-align: center;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;-webkit-transition: all .3s;-moz-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
+.icon-button.linkedin {background-color: #0077b5;}
+.icon-button.xing {background-color: #026466;}
+.icon-button.email {background-color: #f7797d;}
+.icon-button.linkedin:hover, .icon-button.xing:hover, .icon-button.email:hover {background-color: white;}
+.icon-button:active {opacity: .3;}
+.icon-button i {background: none;color: white;height: 3rem;left: 0;line-height: 3rem;top: 0;width: 3rem;border-radius: 1px;}
+.icon-button .fa-linkedin-in:hover {color: #0077b5;}
+.icon-button .fa-xing:hover {color: #026466;}
+.icon-button .fa-envelope:hover {color: #f7797d;}
+.scroll {background-color: white;bottom: 2rem;left: 45%;text-align: center;box-shadow: 0 0 4em rgba(0,0,0,.5);border-radius: 5em;-webkit-animation: bounce 2s infinite 2s;-moz-animation: bounce 2s infinite 2s;animation: bounce 2s infinite 2s;-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;transform: scale(1);}
+.scroll i {height: 3em;width: 3em;left: 0;line-height: 3rem;}
+.card {box-shadow: 0 0 4em rgba(242,72,81,.05);transition: all .3s;padding-left: 0 !important;padding-right: 0 !important;border: 0;border-radius: 1px;}
+.card:hover {transform: scale(1.05);box-shadow: 0px 0px 25px 0px rgba(242,72,81,.2);}
+.card:active {transform: scale(.95);background-color: #f0f0f0;}
+.blink {animation: 1s blinker linear infinite;-webkit-animation: 1s blinker linear infinite;-moz-animation: 1s blinker linear infinite;}
+.card-body {padding: 0;}
+.card-title, .card-text > p {margin: 1em;}
+.row {text-align: center;margin: 0;}
+.blog-header {background-repeat: no-repeat;background-position: left top;background-size: auto 100vh;background-attachment: fixed;position: relative;z-index: -1;text-align: center;}
+.blog-title {background-color: rgba(0,0,0,.75);backdrop-filter: blur(2em);padding-top: 1em;padding-bottom: 3em;color: white;}
+.blog-container {background-color: #fff;box-shadow: 0 0 4em rgba(0,0,0,.1);margin-bottom: 5em;padding: 2em;margin-top: -7em;}
+.blog-nav {padding-bottom: 2em;}
+.blog-nav > div > p {margin: 0;position: relative;top: 50%;transform: translateY(-50%);}
+.blog-nav > div > p > a {color: #f7797d;font-weight: 500;}
+.blog-nav > div > p > a > i {font-size: 2em;}
+@-moz-keyframes blinker {0% {opacity: 1;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}}
+@-webkit-keyframes blinker {0% {opacity: 1;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}}
+@keyframes blinker {0% {opacity: 1;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}}
+@keyframes bounce {0%, 100%, 20%, 50%, 80% {-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);}
+	40% {-webkit-transform: translateY(-10px);-ms-transform: translateY(-10px);transform: translateY(-10px);}
+	60% {-webkit-transform: translateY(-5px);-ms-transform: translateY(-5px);transform: translateY(-5px);}}
+@media screen and (max-width:480px) {homesection {padding-right: 2em;padding-left: 2em;}
+	.blog-container {padding-bottom: 0;padding-bottom: 2em;padding-right: 0;padding-left: 0;margin-bottom: 0;}}
