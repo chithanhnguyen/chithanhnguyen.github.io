@@ -212,6 +212,12 @@ img {
 	background: #FAFAFA;
 }
 
+.centered {
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+}
+
 .sticky-note-pink {
 	border-top-color: #EE878A;
 	border-top-style: solid;
@@ -276,6 +282,26 @@ img {
 	width: 90%;
 }
 
+.button {
+	background-color: #CE3739;
+	border: none;
+	color: white;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 0.5rem;
+	margin-left: 0;
+	cursor: pointer;
+	transition: all .2s ease-in-out; 
+}
+
+.button:hover {
+	transform: scale(1.1);
+}
+
 #up {
 	cursor: pointer;
 	box-shadow: 0 0 4em rgba(0, 0, 0, 0.2);
@@ -328,6 +354,16 @@ img {
 
 	h2, h3 {
 		font-size: 1.5em;
+	}
+
+	.centered {
+		display: flex;
+		align-items: left; 
+		justify-content: left;
+	}
+
+	.desktop {
+		display: none;
 	}
 
 }
