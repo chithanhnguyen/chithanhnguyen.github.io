@@ -80,6 +80,10 @@ img {
 	font-weight: 700;
 }
 
+a {
+	text-decoration: none;
+}
+
 .fullscreen {
 	position: absolute;
 	min-height: 100vh;
