@@ -1,0 +1,296 @@
+html {
+	background: black;
+}
+body, p {
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5rem;
+	color: #fff;
+	position: relative;
+	margin: none;
+}
+
+h1 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 100;
+	font-size: 5.5em;
+	color: #fff;
+	line-height: 1;
+	margin-block-start: 0.2rem;
+    margin-block-end: 0.2rem;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+h2 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	color: #fff;
+	font-size: 3.5rem;
+	margin-block-start: 0rem;
+    margin-block-end: 0.5rem;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    line-height: 1;
+}
+
+h3 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	font-size: 2.5rem;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	scroll-behavior: smooth;
+	scroll-snap-align: start;
+	position: relative;
+	overflow: hidden;
+	padding: 5vw;
+}
+
+img {
+	width: 95%; 
+	height: auto;
+	display: block;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.definitions {
+	margin-left: 5em;
+}
+
+.pure-g {
+	display: flex;
+	align-items: center;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	font-family: 'Poppins', sans-serif;
+}
+
+.pure-g [class*=pure-u] {
+	font-family: 'Poppins', sans-serif;
+}
+
+.extrabold {
+	font-weight: 700;
+}
+
+.fullscreen {
+	position: absolute;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.overlay {
+	position: fixed;
+	z-index: 10;
+}
+
+.social-icons {
+	right: 0%;
+	bottom: 0%;
+	line-height: 0;
+}
+
+.icon-button {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.0rem;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.icon-button.linkedin {
+	background-color: #0077B5;
+}
+
+.icon-button.xing {
+	background-color: #026466;
+}
+
+.icon-button.email {
+	background-color: #CE3739;
+}
+
+.icon-button.linkedin:hover,
+.icon-button.xing:hover,
+.icon-button.email:hover {
+	background-color: white;
+}
+
+.icon-button:active {
+	opacity: 0.3;
+}
+
+.icon-button i {
+	background: none;
+	color: white;
+	height: 3rem;
+	left: 0;
+	line-height: 3rem;
+	top: 0;
+	width: 3rem;
+	border-radius: 0.1em;
+}
+
+.icon-button .fa-linkedin-in:hover {
+	color: #0077B5;
+}
+
+.icon-button .fa-xing:hover {
+	color: #026466;
+}
+
+.icon-button .fa-envelope:hover {
+	color: #CE3739;
+}
+
+.scroll {
+	background-color: rgba(255, 255, 255, 0.1);
+	bottom: 2rem;
+	left: 45%;
+	text-align: center;
+	border-radius: 1.5rem;
+	-webkit-animation: bounce 2s infinite 2s;
+	-moz-animation: bounce 2s infinite 2s;
+	-o-animation: bounce 2s infinite 2s;
+	animation: bounce 2s infinite 2s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	transform: scale(1)
+}
+
+.scroll i {
+	color: white;
+	height: 3em;
+	width: 3em;
+	left: 0;
+	line-height: 3rem
+}
+
+.tag-container {
+	display: flex;
+}
+
+.tag {
+
+	font-weight: 600;
+	font-size: 1rem; 
+	padding-right: 0.25rem;
+	padding-left: 0.25rem;
+	margin: 0.25rem;
+	width: auto;
+}
+
+.tag:first-child {
+	margin-left: 0;
+}
+
+.red {
+	background-color: #CE3739;
+}
+
+.blue{
+	background-color: #227E7B;
+}
+
+.green{
+	background-color: #33A82D;
+}
+
+.purple{
+	background-color: #47328F;
+}
+
+.yellow{
+	background-color: #D07B37;
+}
+
+#home {
+	background-image: url("../images/background.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: auto 100vh;
+	height: 100vh;
+	background-attachment: fixed;
+}
+
+#portfolio, #about-me {
+	background-image: url("../images/background-blur.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: auto 100vh;
+	background-attachment: fixed;
+}
+
+#about-me {
+	height: 90vh;
+}
+
+#up {
+	cursor: pointer;
+	box-shadow: 0 0 4em rgba(0, 0, 0, 0.2);
+	opacity: 0.75;
+}
+
+#up:hover {
+	opacity: 1;
+}
+
+@keyframes bounce {
+	0%,
+	100%,
+	20%,
+	50%,
+	80% {
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0)
+	}
+
+	40% {
+		-webkit-transform: translateY(-10px);
+		-ms-transform: translateY(-10px);
+		transform: translateY(-10px)
+	}
+
+	60% {
+		-webkit-transform: translateY(-5px);
+		-ms-transform: translateY(-5px);
+		transform: translateY(-5px)
+	}
+
+}
+
+@viewport {
+	zoom: 1.0;
+	width: extend-to-zoom;
+}
+
+@media only screen and (min-width:480px) {
+	.responsive-br {
+		display: none;
+	}
+
+	h3 {
+		font-size: 2em;
+	}
+
+}

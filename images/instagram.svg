@@ -1,0 +1,23 @@
+<svg id="Group_18" data-name="Group 18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 65 65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1" y1="1" x2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffc107"/>
+      <stop offset="0.498" stop-color="#f44336"/>
+      <stop offset="0.89" stop-color="#9c27b0"/>
+      <stop offset="1" stop-color="#9c27b0"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_104" data-name="Rectangle 104" class="cls-1" width="65" height="65" transform="translate(0 0)"/>
+  <path id="Path_22" data-name="Path 22" class="cls-2" d="M101.1,72.3H85.342A13.141,13.141,0,0,0,72.2,85.442V101.2a13.141,13.141,0,0,0,13.142,13.142H101.1A13.141,13.141,0,0,0,114.242,101.2V85.423A13.137,13.137,0,0,0,101.1,72.3Zm9.207,28.881a9.2,9.2,0,0,1-9.188,9.188H85.342a9.2,9.2,0,0,1-9.188-9.188V85.423a9.2,9.2,0,0,1,9.188-9.188H101.1a9.2,9.2,0,0,1,9.188,9.188v15.758Z" transform="translate(-60.924 -60.811)"/>
+  <path id="Path_23" data-name="Path 23" class="cls-2" d="M137.806,127.3a10.506,10.506,0,1,0,10.506,10.506A10.5,10.5,0,0,0,137.806,127.3Zm0,17.076a6.571,6.571,0,1,1,6.571-6.571A6.583,6.583,0,0,1,137.806,144.376Z" transform="translate(-105.499 -105.306)"/>
+  <ellipse id="Ellipse_4" data-name="Ellipse 4" class="cls-2" cx="1.394" cy="1.394" rx="1.394" ry="1.394" transform="translate(42.042 19.817)"/>
+</svg>
