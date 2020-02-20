@@ -208,6 +208,12 @@ a {
 	line-height: 3rem
 }
 
+.centered {
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+}
+
 .tag-container {
 	display: flex;
 }
