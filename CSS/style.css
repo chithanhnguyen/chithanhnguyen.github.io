@@ -80,6 +80,27 @@ img {
 	font-weight: 700;
 }
 
+.bubble {
+	width: auto;
+	background: #CE3739;
+	padding: 20px;
+	font-weight: 700;
+	position: relative;
+}
+
+.bubble:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #CE3739;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #CE3739;
+  border-bottom: 10px solid transparent;
+  left: 19px;
+  bottom: -19px;
+}
+
 a {
 	text-decoration: none;
 }
@@ -194,7 +215,6 @@ a {
 }
 
 .tag {
-
 	font-weight: 600;
 	font-size: 1rem; 
 	padding-right: 0.25rem;
