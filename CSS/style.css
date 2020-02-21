@@ -261,7 +261,7 @@ a {
 	background-attachment: fixed;
 }
 
-#portfolio, #about-me {
+#main, #about-me {
 	background-image: url("../images/background-blur.png");
 	background-repeat: no-repeat;
 	background-position: left top;
