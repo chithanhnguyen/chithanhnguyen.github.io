@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body, p {
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
