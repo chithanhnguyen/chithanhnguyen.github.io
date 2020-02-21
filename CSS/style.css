@@ -1,6 +1,7 @@
 html {
 	background: black;
 }
+
 body, p {
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
@@ -201,7 +202,7 @@ a {
 }
 
 .scroll i {
-	color: white;
+	color: #CE3739;
 	height: 3em;
 	width: 3em;
 	left: 0;
@@ -274,11 +275,21 @@ a {
 
 #up {
 	cursor: pointer;
-	box-shadow: 0 0 4em rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 4em rgba(0, 0, 0, 1);
 	opacity: 0.75;
 }
 
 #up:hover {
+	opacity: 1;
+}
+
+#down {
+	cursor: pointer;
+	box-shadow: 0 0 4em rgba(0, 0, 0, 1);
+	opacity: 0.75;
+}
+
+#down:hover {
 	opacity: 1;
 }
 

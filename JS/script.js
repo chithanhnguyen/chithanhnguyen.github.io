@@ -62,6 +62,12 @@ const scrollToTop = () => {
     }
 };
 
+const scrollDown = () => {
+    $('html, body').animate({
+        scrollTop: $("#main").offset().top
+    }, 800);
+};
+
 $(document).ready(function() {
     $("#up").hide();
     var homePosition = $("#home").offset().top;
@@ -75,7 +81,12 @@ $(document).ready(function() {
             $("#down").show();
         }
     });
+
     $("#up").click(function(e) {
         scrollToTop();
-    })
+    });
+
+    $("#down").click(function(e) {
+        scrollDown();
+    });
 });
