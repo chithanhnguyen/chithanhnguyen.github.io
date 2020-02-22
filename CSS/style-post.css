@@ -140,9 +140,9 @@ img {
 }
 
 .scroll {
-	background-color: rgba(206, 55, 57, 0.1);
+	background-color: rgba(255, 255, 255, 0.1);
 	bottom: 2rem;
-	left: 48%;
+	left: 45%;
 	text-align: center;
 	border-radius: 1.5rem;
 	-webkit-animation: bounce 2s infinite 2s;
@@ -304,7 +304,7 @@ img {
 
 #up {
 	cursor: pointer;
-	box-shadow: 0 0 4em rgba(0, 0, 0, 1);
+	box-shadow: 0 0 4em rgba(0, 0, 0, 0.5);
 	opacity: 0.75;
 }
 
@@ -314,7 +314,7 @@ img {
 
 #down {
 	cursor: pointer;
-	box-shadow: 0 0 4em rgba(0, 0, 0, 1);
+	box-shadow: 0 0 4em rgba(0, 0, 0, 0.5);
 	opacity: 0.75;
 }
 
