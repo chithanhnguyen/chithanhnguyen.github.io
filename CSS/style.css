@@ -24,7 +24,7 @@ h1 {
     margin-inline-end: 0;
 }
 
-h2 {
+h2, h4 {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	color: #fff;
@@ -39,7 +39,7 @@ h2 {
 h3 {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
-	font-size: 2.5rem;
+	font-size: 2.5em;
 }
 
 section {
@@ -50,19 +50,23 @@ section {
 	scroll-snap-align: start;
 	position: relative;
 	overflow: hidden;
-	padding: 5vw;
+	padding: 5vh 15vw;
 }
 
 img {
-	width: 95%; 
+	width: 100%; 
 	height: auto;
 	display: block;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
 
+.entry {
+ margin: 5vw;
+}
+
 .definitions {
-	margin-left: 5em;
+	margin-left: 3em;
 }
 
 .pure-g {
@@ -252,7 +256,29 @@ a {
 	background-color: #D07B37;
 }
 
-#home {
+.button {
+	width: auto;
+
+	background-color: #CE3739;
+	border: none;
+	color: white;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 0.5rem;
+	margin-left: 0;
+	cursor: pointer;
+	transition: all .2s ease-in-out; 
+}
+
+.button:hover {
+	transform: scale(1.1);
+}
+
+#home, #about-me {
 	background-image: url("../images/background.png");
 	background-repeat: no-repeat;
 	background-position: left top;
@@ -261,7 +287,7 @@ a {
 	background-attachment: fixed;
 }
 
-#main, #about-me {
+#main {
 	background-image: url("../images/background-blur.png");
 	background-repeat: no-repeat;
 	background-position: left top;
@@ -323,13 +349,25 @@ a {
 	width: extend-to-zoom;
 }
 
-@media only screen and (min-width:480px) {
+@media only screen and (max-width:480px) {
 	.responsive-br {
 		display: none;
 	}
 
-	h3 {
+	h4 {
 		font-size: 2em;
+	}
+
+	section{
+		padding: 5vw;
+	}
+
+	.entry {
+		margin: 5vh 0;
+	}
+
+	.definitions {
+		margin-left: 0;
 	}
 
 }
