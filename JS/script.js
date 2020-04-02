@@ -68,19 +68,29 @@ const scrollDown = () => {
     }, 800);
 };
 
+// Check scroll position
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos < currentScrollPos) {
+        $("#logo").css("left", "-5em");
+    } else {
+        $("#logo").css("left", "0%");
+    }
+    if (currentScrollPos == 0) {
+        $("#up").hide();
+        $("#down").show();
+    }
+    else {
+        $("#up").show();
+        $("#down").hide();
+    }
+    prevScrollpos = currentScrollPos;
+}
+
 $(document).ready(function() {
     $("#up").hide();
-    var homePosition = $("#home").offset().top;
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > homePosition) {
-            $("#up").show();
-            $("#down").hide();
-        }
-        if ($(window).scrollTop() == homePosition) {
-            $("#up").hide();
-            $("#down").show();
-        }
-    });
 
     $("#up").click(function(e) {
         scrollToTop();
