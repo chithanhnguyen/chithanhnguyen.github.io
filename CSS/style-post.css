@@ -388,12 +388,6 @@ img {
 		font-size: 1.5em;
 	}
 
-	.centered {
-		display: flex;
-		align-items: left; 
-		justify-content: left;
-	}
-
 	.desktop {
 		display: none;
 	}
