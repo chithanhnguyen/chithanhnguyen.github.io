@@ -106,9 +106,14 @@ img {
 	background-color: #CE3739;
 }
 
+.icon-button.dribbble {
+	background-color: #ea4c89;
+}
+
 .icon-button.linkedin:hover,
 .icon-button.xing:hover,
-.icon-button.email:hover {
+.icon-button.email:hover,
+.icon-button.dribbble:hover {
 	background-color: white;
 }
 
@@ -137,6 +142,10 @@ img {
 
 .icon-button .fa-envelope:hover {
 	color: #CE3739;
+}
+
+.icon-button .fa-dribbble:hover {
+	color: #ea4c89;
 }
 
 .scroll {
