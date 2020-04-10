@@ -162,7 +162,8 @@ img {
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
-	transform: scale(1)
+	transform: scale(1);
+	backdrop-filter: blur(30px) saturate(125%);
 }
 
 .scroll i {
@@ -307,6 +308,7 @@ img {
 	transform: scale(1);
 	cursor: pointer;
 	box-shadow: 0 0 4em rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(30px) saturate(125%);
 }
 
 .logo > a > img {
@@ -336,6 +338,7 @@ img {
 #up {
 	cursor: pointer;
 	box-shadow: 0 0 4em rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(30px) saturate(125%);
 	opacity: 0.75;
 }
 
@@ -346,6 +349,7 @@ img {
 #down {
 	cursor: pointer;
 	box-shadow: 0 0 4em rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(30px) saturate(125%);
 	opacity: 0.75;
 }
 
