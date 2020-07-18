@@ -165,10 +165,10 @@ a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
+    -moz-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
+    -o-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
+    transition: all .3s cubic-bezier(.52,.08,.28,1.52);
 }
 
 .icon-button:hover{
