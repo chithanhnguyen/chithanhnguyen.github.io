@@ -43,7 +43,7 @@ section {
     scroll-snap-align: start;
     position: relative;
     overflow: hidden;
-    padding: 0
+    padding: 15vh 15vw 10vh 15vw;
 }
 
 img {
@@ -53,12 +53,15 @@ img {
     margin-bottom: 1rem
 }
 
+.mobile {
+    display: none;
+}
+
 .card {
     cursor: pointer;
     background-color: rgba(255, 255, 255, .1);
     z-index: 0;
     overflow: hidden;
-    margin: 2vh 1vw;
     -webkit-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
     -moz-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
     -o-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
@@ -88,42 +91,22 @@ img {
     letter-spacing: 0.1rem;
 }
 
-.bubble {
-    width: auto;
+.logo {
+    width: fit-content;
     background: #ce3739;
     padding: 0.75rem;
-    margin-bottom: 1rem;
-    position: relative;
-    left: -1rem;
-    opacity: 0;
-}
-
-.bubble:before {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-left: 0.5rem solid #ce3739;
-    border-right: 0.5rem solid transparent;
-    border-top: 0.5rem solid #ce3739;
-    border-bottom: 0.5rem solid transparent;
-    left: 0rem;
-    bottom: -1rem;
-}
-
-.logo {
-    width: auto;
-    background: #ce3739;
-    padding: 0.25rem 0.75rem;
     margin-bottom: 0.75rem;
     position: relative;
-    left: 5vw;
-    top: 11vh;
+    left: -1rem;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
     transform-origin: top left;
+}
+
+.logo > p {
+    margin: 0;
 }
 
 .logo:before {
@@ -137,6 +120,14 @@ img {
     border-bottom: 0.5rem solid transparent;
     left: 0rem;
     bottom: -0.75rem;
+}
+
+.logo:hover {
+    -webkit-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
+    -moz-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
+    -o-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
+    transition: all .3s cubic-bezier(.52,.08,.28,1.52);
+    opacity: 0.9;
 }
 
 a {
@@ -277,20 +268,38 @@ a {
 }
 
 .button:hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
+    opacity: 0.9;
 }
 
-#about-me,
 #home {
-    padding: 10vh 6vw;
 }
 
 #main {
-    padding: 0 5vw;
 }
 
-#about-me {
- 
+#aboutyou,
+#unibremen {
+    display: inline-block;
+    border-bottom: 0.2em solid;
+    border-bottom-color: rgba(255, 255, 255, .25);
+    font-weight: 600;
+    line-height: 0.8em;
+    -webkit-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
+    -moz-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
+    -o-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
+    transition: all .3s cubic-bezier(.52,.08,.28,2.52);
+}
+
+#aboutyou:hover,
+#unibremen:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+#aboutyou:visited,
+#unibremen:visited {
+    color: #fff;
 }
 
 @viewport {
@@ -299,16 +308,17 @@ a {
 }
 
 @media only screen and (max-width:480px) {
-    .responsive-br {
-        display: none
-    }
-
-    h4 {
-        font-size: 2em
-    }
-
     section {
-        padding: 5vw
+        padding: 5vw 5vh;
+        min-height: 100vh;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile{
+        display: inline;
     }
 
     .card {

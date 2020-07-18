@@ -22,7 +22,7 @@ TxtRotate.prototype.tick = function() {
     this.el.innerHTML = this.txt + '_';
 
     var that = this;
-    var delta = 300 - Math.random() * 100;
+    var delta = 150 - Math.random() * 100;
 
     if (this.isDeleting) {
         delta /= 2;
@@ -68,13 +68,15 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (currentScrollPos < 50) {
-        $(".logo").css("top", "11vh");
-        $(".logo").css("left", "5vw");
+        $(".logo").removeClass("overlay");
+        $(".logo").css("top", "0");
+        $(".logo").css("left", "-1rem");
         $(".logo").css("transform", "scale(1)");
     } else {
-        $(".logo").css("top", "1vh");
-        $(".logo").css("left", "1vw");
-        $(".logo").css("transform", "scale(0.5)");
+        $(".logo").addClass("overlay");
+        $(".logo").css("top", "1.5rem");
+        $(".logo").css("left", "1.5rem");
+        $(".logo").css("transform", "scale(0.75)");
     }
 
     if (currentScrollPos == 0) {
@@ -90,14 +92,31 @@ window.onscroll = function() {
 
 $(document).ready(function() {
     $(".scroll").css("transform", "scale(0)");
+    
     $(".scroll").hover(function(e) {
-        $(this).css("transform", "scale(1.1)");
+        $(this).css("transform", "scale(1.05)");
+        $(this).css("background-color", "rgba(255, 255, 255, .25)");
         }, function(){
         $(this).css("transform", "scale(1)");
+        $(this).css("background-color", "rgba(255, 255, 255, .1)");
     });
 
     $(".scroll").click(function(e) {
         scrollToTop();
+    });
+    
+    $(".logo").hover(function(e) {
+            if (window.pageYOffset < 50) {
+                $(this).css("transform", "scale(1.1)");
+            } else {
+                $(this).css("transform", "scale(0.85)");
+            }
+        }, function(){
+            if (window.pageYOffset < 50) {
+                $(this).css("transform", "scale(1)");
+            } else {
+                $(this).css("transform", "scale(0.75)");
+            }
     });
 });
 
