@@ -2,6 +2,11 @@ html {
     background: #000
 }
 
+footer {
+    text-align: center;
+    padding: 5vh 15vw;
+}
+
 body,
 p {
     font-family: Jost, sans-serif;
@@ -149,14 +154,18 @@ a {
 
 .social-icons > a > i {
     font-size: 1.5rem;
-    letter-spacing: 1.5rem;
+    padding: 0 0 0 1.5rem;
     line-height: 5rem;
-    opacity: 0.75;
+    opacity: 0.6;
     color: #fff;
     -webkit-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
     -moz-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
     -o-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
     transition: all .3s cubic-bezier(.52,.08,.28,1.52);
+}
+
+.social-icons > a:first-of-type > i {
+    padding: 0;
 }
 
 .social-icons > a > i:visited {
