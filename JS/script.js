@@ -69,7 +69,7 @@ window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (currentScrollPos < 50) {
         $(".logo").removeClass("overlay");
-        $(".logo").css("top", "0");
+        $(".logo").css("top", "-1rem");
         $(".logo").css("left", "-1rem");
         $(".logo").css("transform", "scale(1)");
     } else {
@@ -110,12 +110,14 @@ $(document).ready(function() {
                 $(this).css("transform", "scale(1.1)");
             } else {
                 $(this).css("transform", "scale(0.85)");
+                $(this).html("<p class='extrabold'>Home &#x1f448</p>");
             }
         }, function(){
             if (window.pageYOffset < 50) {
                 $(this).css("transform", "scale(1)");
             } else {
                 $(this).css("transform", "scale(0.75)");
+                $(this).html("<p class='extrabold'>Xin Chào &#x270C</p>");
             }
     });
 });

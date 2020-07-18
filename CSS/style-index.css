@@ -18,7 +18,7 @@ h1 {
     font-weight: 100;
     font-size: 2.5em;
     color: #fff;
-    line-height: 1;
+    line-height: 1em;
     margin-block-start: .2rem;
     margin-block-end: .2rem;
     margin-inline-start: 0;
@@ -62,6 +62,7 @@ img {
     background-color: rgba(255, 255, 255, .1);
     z-index: 0;
     overflow: hidden;
+    margin: 0.5rem;
     -webkit-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
     -moz-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
     -o-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
@@ -77,8 +78,8 @@ img {
     transform: scale(1.01);
 }
 
-.card>.content {
-    margin: 2vw 3vw
+.card > .content {
+    margin: 1rem;
 }
 
 .definitions {
@@ -97,6 +98,7 @@ img {
     padding: 0.75rem;
     margin-bottom: 0.75rem;
     position: relative;
+    top: -1rem;
     left: -1rem;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
@@ -145,45 +147,27 @@ a {
 	width: 3rem;
 }
 
-.icon-button {
-	display: inline-block;
-    cursor: pointer;
+.social-icons > a > i {
     font-size: 1.5rem;
-    width: 3rem;
-    line-height: 3rem;
-	text-align: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    letter-spacing: 1.5rem;
+    line-height: 5rem;
+    opacity: 0.5;
+    color: #fff;
     -webkit-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
     -moz-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
     -o-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
     transition: all .3s cubic-bezier(.52,.08,.28,1.52);
 }
 
-.icon-button:hover{
-	background-color: rgba(255, 255, 255, 0.1);
+.social-icons > a > i:visited {
+    transform: scale(1.1);
+    opacity: 1;
+    color: #fff;
 }
 
-.icon-button .fa-linkedin-in {
-    color: #0077b5
-}
-
-.icon-button .fa-xing {
-    color: #026466
-}
-
-.icon-button .fa-envelope-open-text {
-    color: #ce3739
-}
-
-.icon-button .fa-dribbble {
-    color: #ea4c89
-}
-
-.icon-button .fa-moon {
-    color: #F39237
+.social-icons > a > i:hover {
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 .scroll {
