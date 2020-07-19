@@ -1,14 +1,16 @@
 :root {
     --red: #ce3739;
+    --grey: rgb(247, 247, 247);
     --font-color: rgb(64, 64, 64);
     --bg-color: rgb(255, 255, 255);
-    --bg-color-2: rgb(247, 247, 247);
+    --bg-color-2: rgb(240, 240, 240);
     --hyperlink: rgb(241, 241, 241);
     --hover: rgb(120, 120, 120);
 }
 
 [data-theme="dark"] {
     --red: #ce3739;
+    --grey: rgb(30, 30, 30);
     --font-color: rgb(252, 252, 252);
     --bg-color: rgb(21, 21, 21);
     --bg-color-2: rgb(34, 34, 34);
