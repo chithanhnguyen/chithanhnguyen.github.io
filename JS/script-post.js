@@ -13,13 +13,6 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (currentScrollPos < 145) {
-        $(".logo").css({
-            "transform": "scale(1)",
-            "top": "-1rem"
-        });
-        $(".logo").removeClass("overlay");
-        $(".logo").removeAttr("href");
-        $(".logo").html("<p class='extrabold'>Xin Chào &#x270C</p>");
         $(".navigation").css({
             "top": "0",
             "padding-top": "3rem",
@@ -47,13 +40,6 @@ window.onscroll = function() {
                 "background-color": "var(--grey)"
             });
         }
-        $(".logo").addClass("overlay");
-        $(".logo").attr("href", "https://chithanhnguyen.github.io/");
-        $(".logo").css({
-            "top": "2rem",
-            "transform": "scale(0.75)"
-        });
-        $(".logo").html("<p class='extrabold'>Home &#x1f448</p>");
     }
     prevScrollpos = currentScrollPos;
 }
@@ -79,26 +65,6 @@ $(document).ready(function() {
 
     $(".scroll").click(function(e) {
         scrollToTop();
-    });
-
-    $(".logo").hover(function(e) {
-        if (window.pageYOffset > 145) {
-            $(this).css({
-                "transform": "scale(0.85)",
-                "-webkit-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
-                "-moz-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
-                "box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)"
-            });
-        }
-    }, function() {
-        if (window.pageYOffset > 145) {
-            $(this).css({
-                "transform": "scale(0.75)",
-                "-webkit-box-shadow": "",
-                "-moz-box-shadow": "",
-                "box-shadow": ""
-            });
-        }
     });
 });
 
