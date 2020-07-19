@@ -67,41 +67,69 @@ var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset; 
-    
-    if (currentScrollPos > prevScrollpos) {
-        $(".scroll").css("transform", "scale(0)");
-        $(".scroll").css("opacity", "0");
-    } else {
-        $(".scroll").css("transform", "scale(1)");
-        $(".scroll").css("opacity", "1");
-    }
-    prevScrollpos = currentScrollPos;
-
-    if (currentScrollPos < 148) {
+    if (currentScrollPos < 145) {
+        $(".logo").css({
+            "transform": "scale(1)",
+            "top": "-1rem"
+        });     
         $(".logo").removeClass("overlay");
         $(".logo").removeAttr("href");
-        $(".logo").css("transform", "scale(1)");
-        $(".logo").css("top", "-1rem");
         $(".logo").html("<p class='extrabold'>Xin Chào &#x270C</p>");
-    } else {        
+        $(".navigation").css({
+            "top": "0",
+            "padding-top": "3rem",
+            "background-color": ""
+        });
+        $(".scroll").css({
+            "transform": "scale(0)",
+            "opacity": "0"
+        });
+    } else {  
+        $(".scroll").css({
+            "transform": "scale(1)",
+            "opacity": "1"
+        });    
+        if (currentScrollPos > prevScrollpos) {
+            $(".navigation").css({
+                "top": "-10rem",
+                "padding-top": "0.75rem",
+                "background-color": "var(--bg-color-2)"
+            });
+        } else {
+            $(".navigation").css({
+                "top": "0",
+                "padding-top": "0.75rem",
+                "background-color": "var(--bg-color-2)"
+            });
+        }
         $(".logo").addClass("overlay");
         $(".logo").attr("href", "https://chithanhnguyen.github.io/");
-        $(".logo").css("top", "1.5rem");
-        $(".logo").css("transform", "scale(0.75)");
+        $(".logo").css({
+            "top": "2rem",
+            "transform": "scale(0.75)"
+        });
         $(".logo").html("<p class='extrabold'>Home &#x1f448</p>");
     }
+    prevScrollpos = currentScrollPos;
 }
 
-$(document).ready(function() {
-    $(".scroll").css("transform", "scale(0)");
-    
+$(document).ready(function() {    
     $(".scroll").hover(function(e) {
-        $(this).css("transform", "scale(1.05)");
-        $(this).css("background-color", "rgba(255, 255, 255, .25)");
-        }, function(){
-
-        $(this).css("transform", "scale(1)");
-        $(this).css("background-color", "rgba(255, 255, 255, .1)");
+        $(this).css({
+            "transform": "scale(1.1)",
+            "background-color": "var(--hyperlink)",
+            "-webkit-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
+            "-moz-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
+            "box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)"
+        });
+    }, function(){
+        $(this).css({
+            "transform": "scale(1)",
+            "background-color": "var(--bg-color-2)",
+            "-webkit-box-shadow": "",
+            "-moz-box-shadow": "",
+            "box-shadow": ""
+        });
     });
 
     $(".scroll").click(function(e) {
@@ -109,14 +137,22 @@ $(document).ready(function() {
     });
     
     $(".logo").hover(function(e) {
-            if (window.pageYOffset > 148) {
-                $(this).css("transform", "scale(0.85)");
-                $(this).css("opacity", "0.9");
+            if (window.pageYOffset > 145) {
+                $(this).css({
+                    "transform": "scale(0.85)",
+                    "-webkit-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
+                    "-moz-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
+                    "box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)"
+            });
             }
         }, function(){
-            if (window.pageYOffset > 148) {
-                $(this).css("transform", "scale(0.75)");
-                $(this).css("opacity", "1");
+            if (window.pageYOffset > 145) {
+                $(this).css({
+                    "transform": "scale(0.75)",
+                    "-webkit-box-shadow": "",
+                    "-moz-box-shadow": "",
+                    "box-shadow": ""
+                });
             }
     });
 });
@@ -133,6 +169,7 @@ if (savedColorScheme) {
 } else {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         colorScheme = 'dark';
+        
         document.documentElement.setAttribute('data-theme', 'dark');
     } else {
         colorScheme = 'light';
@@ -149,15 +186,23 @@ function switchTheme() {
         colorScheme = "dark";
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark'); 
+        $(".switch").html("Light On");
     }
     else {
         colorScheme = "light";
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
+        $(".switch").html("Light Off");
     }    
 }
 
 $(document).ready(function() {
+    if (colorScheme == "dark") {
+        $(".switch").html("Light On");
+    } else {
+        $(".switch").html("Light Off");
+    }
+
     $(".switch").click(function(e) {
         switchTheme();
     });

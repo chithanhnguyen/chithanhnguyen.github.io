@@ -10,7 +10,7 @@
 
 [data-theme="dark"] {
     --font-color: #ccc;
-	--bg-color: #141414;
+	--bg-color: rgb(21, 21, 21);
 	--bg-color-2: #222;
 	--heading-color: #fff;
 	--nav: rgba(0, 0, 0, 0.5);
