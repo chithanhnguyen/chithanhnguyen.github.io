@@ -93,13 +93,13 @@ window.onscroll = function() {
             $(".navigation").css({
                 "top": "-10rem",
                 "padding-top": "0.75rem",
-                "background-color": "var(--bg-color-2)"
+                "background-color": "var(--grey)"
             });
         } else {
             $(".navigation").css({
                 "top": "0",
                 "padding-top": "0.75rem",
-                "background-color": "var(--bg-color-2)"
+                "background-color": "var(--grey)"
             });
         }
         $(".logo").addClass("overlay");
