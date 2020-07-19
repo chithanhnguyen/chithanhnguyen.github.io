@@ -28,7 +28,7 @@ TxtRotate.prototype.tick = function() {
         delta /= 2;
     }
 
-    if (!this.isDeleting && this.txt === (fullTxt )) {
+    if (!this.isDeleting && this.txt === (fullTxt)) {
         delta = this.period;
         this.isDeleting = true;
     } else if (this.isDeleting && this.txt === '') {
@@ -66,12 +66,12 @@ const scrollToTop = () => {
 var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset; 
+    var currentScrollPos = window.pageYOffset;
     if (currentScrollPos < 145) {
         $(".logo").css({
             "transform": "scale(1)",
             "top": "-1rem"
-        });     
+        });
         $(".logo").removeClass("overlay");
         $(".logo").removeAttr("href");
         $(".logo").html("<p class='extrabold'>Xin Chào &#x270C</p>");
@@ -84,11 +84,11 @@ window.onscroll = function() {
             "transform": "scale(0)",
             "opacity": "0"
         });
-    } else {  
+    } else {
         $(".scroll").css({
             "transform": "scale(1)",
             "opacity": "1"
-        });    
+        });
         if (currentScrollPos > prevScrollpos) {
             $(".navigation").css({
                 "top": "-10rem",
@@ -113,7 +113,7 @@ window.onscroll = function() {
     prevScrollpos = currentScrollPos;
 }
 
-$(document).ready(function() {    
+$(document).ready(function() {
     $(".scroll").hover(function(e) {
         $(this).css({
             "transform": "scale(1.1)",
@@ -122,7 +122,7 @@ $(document).ready(function() {
             "-moz-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
             "box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)"
         });
-    }, function(){
+    }, function() {
         $(this).css({
             "transform": "scale(1)",
             "background-color": "var(--bg-color-2)",
@@ -135,25 +135,25 @@ $(document).ready(function() {
     $(".scroll").click(function(e) {
         scrollToTop();
     });
-    
+
     $(".logo").hover(function(e) {
-            if (window.pageYOffset > 145) {
-                $(this).css({
-                    "transform": "scale(0.85)",
-                    "-webkit-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
-                    "-moz-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
-                    "box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)"
+        if (window.pageYOffset > 145) {
+            $(this).css({
+                "transform": "scale(0.85)",
+                "-webkit-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
+                "-moz-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
+                "box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)"
             });
-            }
-        }, function(){
-            if (window.pageYOffset > 145) {
-                $(this).css({
-                    "transform": "scale(0.75)",
-                    "-webkit-box-shadow": "",
-                    "-moz-box-shadow": "",
-                    "box-shadow": ""
-                });
-            }
+        }
+    }, function() {
+        if (window.pageYOffset > 145) {
+            $(this).css({
+                "transform": "scale(0.75)",
+                "-webkit-box-shadow": "",
+                "-moz-box-shadow": "",
+                "box-shadow": ""
+            });
+        }
     });
 });
 
@@ -169,13 +169,13 @@ if (savedColorScheme) {
 } else {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         colorScheme = 'dark';
-        
+
         document.documentElement.setAttribute('data-theme', 'dark');
     } else {
         colorScheme = 'light';
         document.documentElement.setAttribute('data-theme', 'light');
     }
-    
+
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
         colorScheme = e.matches ? "dark" : "light";
     });
@@ -185,15 +185,14 @@ function switchTheme() {
     if (colorScheme == 'light') {
         colorScheme = "dark";
         document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark'); 
+        localStorage.setItem('theme', 'dark');
         $(".switch").html("Light On");
-    }
-    else {
+    } else {
         colorScheme = "light";
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
         $(".switch").html("Light Off");
-    }    
+    }
 }
 
 $(document).ready(function() {
