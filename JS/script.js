@@ -66,28 +66,30 @@ const scrollToTop = () => {
 var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < 50) {
-        $(".logo").removeClass("overlay");
-        $(".logo").css("top", "-1rem");
-        $(".logo").css("left", "-1rem");
-        $(".logo").css("transform", "scale(1)");
-    } else {
-        $(".logo").addClass("overlay");
-        $(".logo").css("top", "1.5rem");
-        $(".logo").css("left", "1.5rem");
-        $(".logo").css("transform", "scale(0.75)");
-    }
-
-    if (currentScrollPos == 0) {
+    var currentScrollPos = window.pageYOffset; 
+    
+    if (currentScrollPos > prevScrollpos) {
         $(".scroll").css("transform", "scale(0)");
         $(".scroll").css("opacity", "0");
-    }
-    else {
+    } else {
         $(".scroll").css("transform", "scale(1)");
         $(".scroll").css("opacity", "1");
     }
     prevScrollpos = currentScrollPos;
+
+    if (currentScrollPos < 148) {
+        $(".logo").removeClass("overlay");
+        $(".logo").removeAttr("href");
+        $(".logo").css("transform", "scale(1)");
+        $(".logo").css("top", "-1rem");
+        $(".logo").html("<p class='extrabold'>Xin Chào &#x270C</p>");
+    } else {        
+        $(".logo").addClass("overlay");
+        $(".logo").attr("href", "https://chithanhnguyen.github.io/");
+        $(".logo").css("top", "1.5rem");
+        $(".logo").css("transform", "scale(0.75)");
+        $(".logo").html("<p class='extrabold'>Home &#x1f448</p>");
+    }
 }
 
 $(document).ready(function() {
@@ -97,6 +99,7 @@ $(document).ready(function() {
         $(this).css("transform", "scale(1.05)");
         $(this).css("background-color", "rgba(255, 255, 255, .25)");
         }, function(){
+
         $(this).css("transform", "scale(1)");
         $(this).css("background-color", "rgba(255, 255, 255, .1)");
     });
@@ -106,18 +109,14 @@ $(document).ready(function() {
     });
     
     $(".logo").hover(function(e) {
-            if (window.pageYOffset < 50) {
-                $(this).css("transform", "scale(1.1)");
-            } else {
+            if (window.pageYOffset > 148) {
                 $(this).css("transform", "scale(0.85)");
-                $(this).html("<p class='extrabold'>Home &#x1f448</p>");
+                $(this).css("opacity", "0.9");
             }
         }, function(){
-            if (window.pageYOffset < 50) {
-                $(this).css("transform", "scale(1)");
-            } else {
+            if (window.pageYOffset > 148) {
                 $(this).css("transform", "scale(0.75)");
-                $(this).html("<p class='extrabold'>Xin Chào &#x270C</p>");
+                $(this).css("opacity", "1");
             }
     });
 });

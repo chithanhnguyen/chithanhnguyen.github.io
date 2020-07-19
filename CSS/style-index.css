@@ -4,7 +4,7 @@ html {
 
 footer {
     text-align: center;
-    padding: 5vh 15vw;
+    padding: 1vh 15vw;
 }
 
 body,
@@ -47,7 +47,6 @@ section {
     scroll-behavior: smooth;
     scroll-snap-align: start;
     position: relative;
-    overflow: hidden;
     padding: 15vh 15vw 10vh 15vw;
 }
 
@@ -67,7 +66,7 @@ img {
     background-color: rgba(255, 255, 255, .1);
     z-index: 0;
     overflow: hidden;
-    margin: 0.5rem;
+    margin: 1rem;
     -webkit-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
     -moz-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
     -o-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
@@ -102,13 +101,13 @@ img {
     background: #ce3739;
     padding: 0.75rem;
     margin-bottom: 0.75rem;
-    position: relative;
-    top: -1rem;
-    left: -1rem;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky;
+    -webkit-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
+    -moz-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
+    -o-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
+    transition: all .3s cubic-bezier(.52,.08,.28,2.52);
     transform-origin: top left;
 }
 
@@ -129,27 +128,27 @@ img {
     bottom: -0.75rem;
 }
 
-.logo:hover {
-    -webkit-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
-    -moz-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
-    -o-transition: all .3s cubic-bezier(.52,.08,.28,1.52);
-    transition: all .3s cubic-bezier(.52,.08,.28,1.52);
-    opacity: 0.9;
-}
-
 a {
     text-decoration: none
 }
 
 .overlay {
     position: fixed;
-    z-index: 10
+    -webkit-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
+    -moz-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
+    -o-transition: all .3s cubic-bezier(.52,.08,.28,2.52);
+    transition: all .3s cubic-bezier(.52,.08,.28,2.52);
+    z-index: 10;
 }
 
 .buttons {
 	position: absolute;
 	bottom: 0;
 	width: 3rem;
+}
+
+.header-content{
+    padding: 1rem;
 }
 
 .social-icons > a > i {
@@ -263,12 +262,6 @@ a {
 .button:hover {
     transform: scale(1.1);
     opacity: 0.9;
-}
-
-#home {
-}
-
-#main {
 }
 
 #aboutyou,
