@@ -57,7 +57,7 @@
 			<section class="white">
 				<div class="pure-g">
 					<div class="pure-u-1 centered">
-						<img src="images/cassiopeia-header.png" style="max-width: 30vw; min-width: 15rem;"></img>
+						<img src="images/cassiopeia_feature_image.webp" style="max-width: 30vw; min-width: 15rem;"></img>
 					</div>
 				</div>	
 				<br></br>
@@ -132,7 +132,7 @@
 				<div class="pure-g">
 					<div class="pure-u-1">
 						<h2>PROBLEM-SOLVING APPROACH</h2>
-						<img src="images/cassiopeia-design-process.png"></img>
+						<img src="images/cassiopeia_design-process.webp"></img>
 					</div>
 				</div>
 			</section>
@@ -144,7 +144,7 @@
 						<p>And, we were right! The situation “up” there was no way to be predicted if one has never been in such surroundings:</p>
 					</div>
 					<div class="pure-u-1 pure-u-lg-1-2">
-						<img src="images/cassiopeia-mamba.jpg"></img>
+						<img src="images/cassiopeia_mamba.webp"></img>
 					</div>
 					<div class="pure-u-1 pure-u-lg-1-2">
 						<ul>
@@ -199,7 +199,7 @@
 						<p>Considering the time and workforce constraints, we decided to go with the divide-and-conquer approach – we divided ourselves into 2 subteams, one team focuses on the “emotion” modules, and our team focused on the “instruction” use case with the MVP described as follow:</p>
 						<p class="textbox">CASSIOPEIA serves as a compact offline voice assistant that enables crew members to select an experiment they want to conduct and guides them through a predefined set of instructions of the chosen experiment. The interaction channels are verbal input, visual and auditory output.</p>
 						<p>The defined system comprises 4 vital components: the voice recognition module, the command execution module, the text-to-speech module, and the graphical user interface. After testing several potential options, we utilized SNIPS which provides a freemium AI-powered on-device speech recognition and text-to-speech services; on the other hand, developing the handler code for SNIPS was not that complicated either. The complementary graphical user interface is a web-based solution with an always-on communication channel with the handler code.</p>
-						<img src="images/cassiopeia-system-architecture.png"></img>
+						<img src="images/cassiopeia_system-architecture.webp"></img>
 					</div>
 				</div>
 			</section>
@@ -219,7 +219,7 @@
 							<li>Messages should be clear, yet as compact as possible;</li>
 							<li>Messages must follow this order:</li>
 						</ul>
-						<img src="images/cassiopeia-message-structure.png"></img>
+						<img src="images/cassiopeia_message-structure.webp"></img>
 						<p>You may now ask yourself why the Content – the most important information – was pushed to the very end of the message. The reason is actually simple: so that the crew member can remember it better! When the short-term memory can’t hold up to the amount of information going in anymore, it becomes a first-in-first-out queue, pushing the older information out to make space for the newer information. Actually, we had also tested our dialog with the main content being pushed to the beginning and observed quite a lot of distractions and confusion.</p>
 						<p>Alongside the guidelines, we also created a flowchart that became really useful for the design of the UI as well as the implementation process.</p>
 					</div>	
@@ -229,7 +229,7 @@
 				<div class="pure-g">
 					<div class="pure-u-1">						
 						<h2>UI DESIGN</h2>
-						<img src="images/cassiopeia-ui-preview.png"></img>
+						<img src="images/cassiopeia_ui-preview.webp"></img>
 						<p>The GUI serves as a complementary output channel which, long story short, shows the crew members what’s being said through the auditory output channel. It aims at solving the complications of the conversational interface such as:</p>
 						<ul>
 							<li>The crew members can’t remember which commands are available;</li>
@@ -244,7 +244,7 @@
 						</ul>
 						
 						<p>The preliminary usability test showed huge improvements in terms of speed as well as accuracy of the commands given to the system compared to the version coming without the GUI. All the people who didn’t get the GUI shared that a GUI would have eased out the process without knowing that the GUI were available.</p>
-						<img src="images/cassiopeia-help-bubble.gif" style="max-width: 30vw; min-width: 15rem; display: block; margin-left: auto; margin-right: auto;"></img>
+						<img src="images/cassiopeia_help-bubble.webp" style="max-width: 30vw; min-width: 15rem; display: block; margin-left: auto; margin-right: auto;"></img>
 						<p>The hint-bubbles, however, seemed to give the test subjects a false restriction while giving commands: they tended to wait until the hint appears and say exactly what the hint tells them to say, even though the system was capable of understanding more than what the hints showed. As a result, we decided to change the order of the hints so that the most important hint is shown first, so as to minimize the waiting time of the crew members. We also tried to adjust the wordings so that it’s clear that the hints are suggestions, not restrictions.</p>
 					</div>
 				</div>
