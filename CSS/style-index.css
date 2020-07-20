@@ -67,7 +67,7 @@ section {
     scroll-behavior: smooth;
     scroll-snap-align: start;
     position: relative;
-    padding: 15vh 15vw 10vh 15vw;
+    padding: 10rem 10rem 5rem 10rem;
 }
 
 img {

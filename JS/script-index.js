@@ -95,19 +95,23 @@ window.onscroll = function() {
                 "padding-top": "0.75rem",
                 "background-color": "var(--grey)"
             });
+            $(".logo").css({
+                "top": "-10rem",
+                "transform": "scale(0.75)"
+            });
         } else {
             $(".navigation").css({
                 "top": "0",
                 "padding-top": "0.75rem",
                 "background-color": "var(--grey)"
             });
+            $(".logo").css({
+                "top": "1rem",
+                "transform": "scale(0.75)"
+            });
         }
         $(".logo").addClass("overlay");
         $(".logo").attr("href", "https://chithanhnguyen.github.io/");
-        $(".logo").css({
-            "top": "2rem",
-            "transform": "scale(0.75)"
-        });
         $(".logo").html("<p class='extrabold'>Home &#x1f448</p>");
     }
     prevScrollpos = currentScrollPos;
