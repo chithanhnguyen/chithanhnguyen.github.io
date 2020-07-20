@@ -67,18 +67,17 @@ var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < 145) {
+    if (currentScrollPos < 75) {
         $(".logo").css({
             "transform": "scale(1)",
-            "top": "-1rem"
+            "top": "5rem",
+            "left": "-1rem"
         });
-        $(".logo").removeClass("overlay");
         $(".logo").removeAttr("href");
         $(".logo").html("<p class='extrabold'>Xin Chào &#x270C</p>");
         $(".navigation").css({
             "top": "0",
-            "padding-top": "3rem",
-            "background-color": ""
+            "padding": "2rem 0"
         });
         $(".scroll").css({
             "transform": "scale(0)",
@@ -91,28 +90,25 @@ window.onscroll = function() {
         });
         if (currentScrollPos > prevScrollpos) {
             $(".navigation").css({
-                "top": "-10rem",
-                "padding-top": "0.75rem",
-                "background-color": "var(--grey)"
+                "top": "-10rem"
             });
             $(".logo").css({
-                "top": "-10rem",
-                "transform": "scale(0.75)"
+                "top": "0rem",
+                "transform": "scale(0.75)",
             });
         } else {
             $(".navigation").css({
                 "top": "0",
-                "padding-top": "0.75rem",
-                "background-color": "var(--grey)"
+                "padding": "0.5rem 0"
             });
             $(".logo").css({
                 "top": "1rem",
                 "transform": "scale(0.75)"
             });
+            $(".logo").attr("href", "https://chithanhnguyen.github.io/");
+            $(".logo").html("<p class='extrabold'>Home &#x1f448</p>");
         }
-        $(".logo").addClass("overlay");
-        $(".logo").attr("href", "https://chithanhnguyen.github.io/");
-        $(".logo").html("<p class='extrabold'>Home &#x1f448</p>");
+
     }
     prevScrollpos = currentScrollPos;
 }
@@ -141,16 +137,16 @@ $(document).ready(function() {
     });
 
     $(".logo").hover(function(e) {
-        if (window.pageYOffset > 145) {
+        if (window.pageYOffset > 75) {
             $(this).css({
-                "transform": "scale(0.85)",
+                "transform": "scale(0.90)",
                 "-webkit-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
                 "-moz-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
                 "box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)"
             });
         }
     }, function() {
-        if (window.pageYOffset > 145) {
+        if (window.pageYOffset > 75) {
             $(this).css({
                 "transform": "scale(0.75)",
                 "-webkit-box-shadow": "",
