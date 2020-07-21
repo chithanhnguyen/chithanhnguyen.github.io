@@ -24,7 +24,7 @@ html {
 
 footer {
 	text-align: center;
-	padding: 1vh 15vw;
+	padding: 5rem 15vw;
 }
 
 body {
@@ -315,6 +315,7 @@ a {
 
 #home {
 	padding-top: 12rem;
+	padding-bottom: 5rem;
 }
 
 @viewport {
@@ -324,7 +325,7 @@ a {
 
 @media only screen and (max-width: 480px) {
 	section {
-		margin: 0 auto 6rem auto;
+		margin: 0 auto 3rem auto;
 		width: 90vw;
 	}
 	.desktop {
@@ -338,5 +339,8 @@ a {
 	}
 	.navigation > div {
 		width: 90vw;
+	}
+	#home {
+		padding-bottom: 0;
 	}
 }
