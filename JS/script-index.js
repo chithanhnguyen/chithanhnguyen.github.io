@@ -70,14 +70,14 @@ window.onscroll = function() {
     if (currentScrollPos < 75) {
         $(".logo").css({
             "transform": "scale(1)",
-            "top": "5rem",
-            "left": "-1rem"
+            "top": "5rem"
         });
         $(".logo").removeAttr("href");
         $(".logo").html("<p class='extrabold'>Xin Chào &#x270C</p>");
         $(".navigation").css({
             "top": "0",
-            "padding": "2rem 0"
+            "padding": "2rem 0",
+            "background-color": ""
         });
         $(".scroll").css({
             "transform": "scale(0)",
@@ -90,7 +90,8 @@ window.onscroll = function() {
         });
         if (currentScrollPos > prevScrollpos) {
             $(".navigation").css({
-                "top": "-10rem"
+                "top": "-10rem",
+                "background-color": "var(--bg-color-2)"
             });
             $(".logo").css({
                 "top": "0rem",
@@ -99,7 +100,8 @@ window.onscroll = function() {
         } else {
             $(".navigation").css({
                 "top": "0",
-                "padding": "0.5rem 0"
+                "padding": "0.5rem 0",
+                "background-color": "var(--bg-color-2)"
             });
             $(".logo").css({
                 "top": "1rem",
