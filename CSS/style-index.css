@@ -3,7 +3,7 @@
 	--grey: rgb(247, 247, 247);
 	--font-color: rgb(64, 64, 64);
 	--bg-color: rgb(255, 255, 255);
-	--bg-color-2: rgb(240, 240, 240);
+	--bg-color-2: rgba(255, 255, 255, 0.8);
 	--hyperlink: rgb(241, 241, 241);
 	--hover: rgb(120, 120, 120);
 }
@@ -13,7 +13,7 @@
 	--grey: rgb(30, 30, 30);
 	--font-color: rgb(252, 252, 252);
 	--bg-color: rgb(21, 21, 21);
-	--bg-color-2: rgb(34, 34, 34);
+	--bg-color-2: rgba(34, 34, 34, 0.8);
 	--hyperlink: rgb(71, 71, 71);
 	--hover: rgb(120, 120, 120);
 }
@@ -109,6 +109,7 @@ img {
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	z-index: 10;
+	backdrop-filter: blur(30px) saturate(125%);
 }
 
 .navigation > div {

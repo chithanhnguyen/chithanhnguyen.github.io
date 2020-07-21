@@ -16,7 +16,8 @@ window.onscroll = function() {
         $(".navigation").css({
             "top": "0",
             "padding": "2rem 0",
-            "background-color": ""
+            "background-color": "",
+            "backdrop-filter": "none"
         });
         $(".scroll").css({
             "transform": "scale(0)",
@@ -30,13 +31,13 @@ window.onscroll = function() {
         if (currentScrollPos > prevScrollpos) {
             $(".navigation").css({
                 "top": "-10rem",
-                "background-color": "var(--bg-color-2)"
             });
         } else {
             $(".navigation").css({
                 "top": "0",
                 "padding": "0.5rem 0",
-                "background-color": "var(--bg-color-2)"
+                "background-color": "var(--bg-color-2)",
+                "backdrop-filter": "blur(30px) saturate(125%)"
             });
         }
     }
