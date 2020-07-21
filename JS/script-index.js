@@ -206,3 +206,36 @@ $(document).ready(function() {
         switchTheme();
     });
 });
+
+// Toggle responsive menu
+
+var menuExpanded = false;
+
+function toggleMenu(){
+    if (menuExpanded == true) {
+        $(".menu").css("margin-left", "");
+        $(".menu > i").attr("class","fas fa-bars");
+        $(".menu > a").css({
+            "display": "none",
+            "opacity": "0"
+        });
+        $(".logo").css("display", "");
+        menuExpanded = false;
+    } else {
+        $(".menu").css("margin-left", "auto");
+        $(".menu > i").attr("class","fas fa-times");
+        $(".menu > a").addClass('inline').outerWidth();
+        $(".menu > a").css({
+            "display": "inline",
+            "opacity": "1"
+        });
+        $(".logo").css("display", "none");
+        menuExpanded = true;
+    }
+}
+
+$(document).ready(function() {
+    $(".menu > i").click(function(e) {
+        toggleMenu();
+    });
+});

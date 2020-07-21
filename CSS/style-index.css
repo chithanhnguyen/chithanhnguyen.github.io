@@ -71,7 +71,9 @@ section {
 	scroll-behavior: smooth;
 	scroll-snap-align: start;
 	position: relative;
-    padding: 5rem 12rem;
+	width: 75vw;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 img {
@@ -79,6 +81,10 @@ img {
 	height: auto;
 	display: block;
 	margin-bottom: 1rem;
+}
+
+.inline{
+	display: inline;
 }
 
 .mobile {
@@ -97,19 +103,27 @@ img {
 }
 
 .navigation > div{
-	padding: 0 12rem;
+	width: 75vw;
+	margin-left: auto;
+	margin-right: auto;
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+	align-items: center;
+	white-space: nowrap;
 }
 
 .navigation > div > .links {
-    text-align: right;
+	text-align: right;
+	padding: 1.20rem 0;
 }
 
 .navigation > div > .links > a {
 	margin: 0 0.5rem;
+}
+
+.menu > a {
+	display: none;
 }
 
 .logo {
@@ -304,8 +318,8 @@ a {
 
 @media only screen and (max-width: 480px) {
 	section {
-		padding: 5vw 5vh;
-		min-height: 100vh;
+		margin: 0 auto 6rem auto;
+		width: 90vw;
 	}
 	.desktop {
 		display: none;
@@ -314,7 +328,7 @@ a {
 		display: inline;
 	}
 	.card {
-		margin: 5vh 0;
+		margin: 1rem 0;
 	}
 }
 
