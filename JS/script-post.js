@@ -62,6 +62,22 @@ $(document).ready(function() {
         });
     });
 
+    $(".logo").hover(function(e) {
+        $(this).css({
+            "transform": "scale(0.8)",
+            "-webkit-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
+            "-moz-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
+            "box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)"
+        });
+    }, function() {
+        $(this).css({
+            "transform": "scale(0.75)",
+            "-webkit-box-shadow": "",
+            "-moz-box-shadow": "",
+            "box-shadow": ""
+        });
+    });
+
     $(".scroll").click(function(e) {
         scrollToTop();
     });
