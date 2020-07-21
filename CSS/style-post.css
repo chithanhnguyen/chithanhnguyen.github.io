@@ -94,6 +94,18 @@ img {
 	height: auto;
 	display: block;
 	margin-bottom: 1rem;
+	-webkit-transition: all 0.3s cubic-bezier(0.52, 0.08, 0.28, 2.52);
+	-moz-transition: all 0.3s cubic-bezier(0.52, 0.08, 0.28, 2.52);
+	-o-transition: all 0.3s cubic-bezier(0.52, 0.08, 0.28, 2.52);
+	transition: all 0.3s cubic-bezier(0.52, 0.08, 0.28, 2.52);
+}
+
+.expandable {
+	cursor: zoom-in;
+	-webkit-transition: all 0.3s cubic-bezier(0.52, 0.08, 0.28, 2.52);
+	-moz-transition: all 0.3s cubic-bezier(0.52, 0.08, 0.28, 2.52);
+	-o-transition: all 0.3s cubic-bezier(0.52, 0.08, 0.28, 2.52);
+	transition: all 0.3s cubic-bezier(0.52, 0.08, 0.28, 2.52);
 }
 
 .extrabold {
@@ -284,6 +296,7 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin: auto;
 }
 
 .sticky-note-pink {
@@ -426,6 +439,5 @@ a {
     section {
         width: calc(100vw - 3rem);
         padding: 5vh 1.5rem;
-    }
-
+	}
 }

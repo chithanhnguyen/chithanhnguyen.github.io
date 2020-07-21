@@ -165,3 +165,47 @@ $(document).ready(function() {
         toggleMenu();
     });
 });
+
+// Zooming expandables
+$(document).ready(function() {
+    $(".expandable").hover(function(e) {
+        if ($(this).css("overflow-x") != "scroll") {
+            $(this).find("img").css({
+                "transform": "scale(1.05)"
+            });
+        }
+    }, function() {
+        $(this).find("img").css({
+            "transform": "scale(1)"
+        });
+    });
+
+    $(".expandable").click(function(e) {
+        if ($(this).css("overflow-x") == "scroll") {
+            console.log("Expanded. Collapsing");
+            $(this).css({
+                "overflow-x": "visible", 
+                "white-space": "nowrap",
+                "cursor": "zoom-in"
+            });
+            $(this).find("img").css({
+                "min-height": " ",
+                "max-height": " ",
+                "width": "100%"
+            });
+        } else {
+            console.log("Collapsed. Expanding");
+            $(this).css({
+                "overflow-x": "scroll", 
+                "white-space": "nowrap",
+                "cursor": "zoom-out"
+            });
+            $(this).find("img").css({
+                "transform": "scale(1)",
+                "max-height": "40vh",
+                "width": "auto",
+                "left": ""
+            });
+        }
+    });
+});
