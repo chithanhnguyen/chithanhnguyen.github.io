@@ -439,6 +439,9 @@ a {
     }
     section {
         width: calc(100vw - 3rem);
-        padding: 5vh 1.5rem;
+		padding: 5vh 1.5rem;
+	}
+	#home{
+		padding-top: 15vh;
 	}
 }
