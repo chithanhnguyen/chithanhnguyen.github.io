@@ -3,9 +3,10 @@
 	--grey: rgb(247, 247, 247);
 	--font-color: rgb(64, 64, 64);
 	--bg-color: rgb(255, 255, 255);
-	--bg-color-2: rgba(255, 255, 255, 0.8);
-	--hyperlink: rgb(241, 241, 241);
+	--bg-color-2: rgba(0, 0, 0, 0.025);
+	--hyperlink: rgba(0, 0, 0, 0.05);
 	--hover: rgb(120, 120, 120);
+	--nav: rgba(255, 255, 255, 0.75);
 }
 
 [data-theme="dark"] {
@@ -13,9 +14,10 @@
 	--grey: rgb(30, 30, 30);
 	--font-color: rgb(252, 252, 252);
 	--bg-color: rgb(21, 21, 21);
-	--bg-color-2: rgba(34, 34, 34, 0.8);
-	--hyperlink: rgb(71, 71, 71);
+	--bg-color-2: rgba(255, 255, 255, 0.05);
+	--hyperlink: rgba(255, 255, 255, 0.1);
 	--hover: rgb(120, 120, 120);
+	--nav: rgba(21, 21, 21, 0.75);
 }
 
 html {
@@ -295,8 +297,8 @@ a {
 .hyperlink {
 	cursor: pointer;
 	display: inline-block;
-	border-bottom: 0.2em solid;
-	border-bottom-color: var(--hyperlink);
+	text-decoration: underline;
+	text-decoration-color: var(--hyperlink);
 	font-weight: 600;
 	line-height: 0.8em;
 	-webkit-transition: all 0.3s cubic-bezier(0.52, 0.08, 0.28, 2.52);

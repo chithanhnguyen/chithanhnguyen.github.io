@@ -91,7 +91,7 @@ window.onscroll = function() {
         if (currentScrollPos > prevScrollpos) {
             $(".navigation").css({
                 "top": "-10rem",
-                "background-color": "var(--bg-color-2)"
+                "background-color": "var(--nav)"
             });
             $(".logo").css({
                 "top": "0rem",
@@ -101,7 +101,7 @@ window.onscroll = function() {
             $(".navigation").css({
                 "top": "0",
                 "padding": "0.5rem 0",
-                "background-color": "var(--bg-color-2)"
+                "background-color": "var(--nav)"
             });
             $(".logo").css({
                 "top": "1rem",
