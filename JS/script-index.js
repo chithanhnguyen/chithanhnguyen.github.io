@@ -74,13 +74,12 @@ window.onscroll = function() {
         });
         $(".logo").removeAttr("href");
         $(".logo").html("<p class='extrabold'>Xin Chào &#x270C</p>");
-        
+
         $(".scroll").css({
             "transform": "scale(0)",
             "opacity": "0"
         });
-    }
-    else {
+    } else {
         $(".scroll").css({
             "transform": "scale(1)",
             "opacity": "1"
@@ -108,7 +107,7 @@ window.onscroll = function() {
             $(".logo").attr("href", "https://chithanhnguyen.github.io/");
             $(".logo").html("<p class='extrabold'>Home &#x1f448</p>");
         }
-        if (currentScrollPos < 525){
+        if (currentScrollPos < 525) {
             $(".navigation").css({
                 "padding": "2rem 0",
                 "background-color": "",
@@ -218,10 +217,10 @@ $(document).ready(function() {
 
 var menuExpanded = false;
 
-function toggleMenu(){
+function toggleMenu() {
     if (menuExpanded == true) {
         $(".menu").css("margin-left", "");
-        $(".menu > i").attr("class","fas fa-bars");
+        $(".menu > i").attr("class", "fas fa-bars");
         $(".menu > a").css({
             "display": "none",
             "opacity": "0"
@@ -230,7 +229,7 @@ function toggleMenu(){
         menuExpanded = false;
     } else {
         $(".menu").css("margin-left", "auto");
-        $(".menu > i").attr("class","fas fa-times");
+        $(".menu > i").attr("class", "fas fa-times");
         $(".menu > a").addClass('inline').outerWidth();
         $(".menu > a").css({
             "display": "inline",
