@@ -67,23 +67,20 @@ var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < 75) {
+    if (currentScrollPos < 85) {
         $(".logo").css({
             "transform": "scale(1)",
             "top": "5rem"
         });
         $(".logo").removeAttr("href");
         $(".logo").html("<p class='extrabold'>Xin Chào &#x270C</p>");
-        $(".navigation").css({
-            "top": "0",
-            "padding": "2rem 0",
-            "background-color": ""
-        });
+        
         $(".scroll").css({
             "transform": "scale(0)",
             "opacity": "0"
         });
-    } else {
+    }
+    else {
         $(".scroll").css({
             "transform": "scale(1)",
             "opacity": "1"
@@ -101,7 +98,8 @@ window.onscroll = function() {
             $(".navigation").css({
                 "top": "0",
                 "padding": "0.5rem 0",
-                "background-color": "var(--nav)"
+                "background-color": "var(--nav)",
+                "backdrop-filter": "blur(30px) saturate(125%)"
             });
             $(".logo").css({
                 "top": "1rem",
@@ -110,8 +108,15 @@ window.onscroll = function() {
             $(".logo").attr("href", "https://chithanhnguyen.github.io/");
             $(".logo").html("<p class='extrabold'>Home &#x1f448</p>");
         }
-
+        if (currentScrollPos < 525){
+            $(".navigation").css({
+                "padding": "2rem 0",
+                "background-color": "",
+                "backdrop-filter": "none"
+            });
+        }
     }
+
     prevScrollpos = currentScrollPos;
 }
 
@@ -141,7 +146,7 @@ $(document).ready(function() {
     $(".logo").hover(function(e) {
         if (window.pageYOffset > 75) {
             $(this).css({
-                "transform": "scale(0.90)",
+                "transform": "scale(0.80)",
                 "-webkit-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
                 "-moz-box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)",
                 "box-shadow": "10px 10px 25px -12px rgba(0, 0, 0, .5)"

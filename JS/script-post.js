@@ -12,7 +12,7 @@ var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < 500) {
+    if (currentScrollPos < 470) {
         $(".navigation").css({
             "top": "0",
             "padding": "2rem 0",

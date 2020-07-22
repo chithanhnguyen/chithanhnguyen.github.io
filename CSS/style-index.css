@@ -6,7 +6,7 @@
 	--bg-color-2: rgba(0, 0, 0, 0.025);
 	--hyperlink: rgba(0, 0, 0, 0.05);
 	--hover: rgb(120, 120, 120);
-	--nav: rgba(255, 255, 255, 0.75);
+	--nav: rgba(255, 255, 255, 0.9);
 }
 
 [data-theme="dark"] {
@@ -15,9 +15,9 @@
 	--font-color: rgb(252, 252, 252);
 	--bg-color: rgb(21, 21, 21);
 	--bg-color-2: rgba(255, 255, 255, 0.05);
-	--hyperlink: rgba(255, 255, 255, 0.1);
+	--hyperlink: rgba(255, 255, 255, 0.25);
 	--hover: rgb(120, 120, 120);
-	--nav: rgba(21, 21, 21, 0.75);
+	--nav: rgba(21, 21, 21, 0.9);
 }
 
 html {
@@ -111,7 +111,6 @@ img {
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	z-index: 10;
-	backdrop-filter: blur(30px) saturate(125%);
 }
 
 .navigation > div {
@@ -299,6 +298,7 @@ a {
 	display: inline-block;
 	text-decoration: underline;
 	text-decoration-color: var(--hyperlink);
+	color: var(--font-color);
 	font-weight: 600;
 	line-height: 0.8em;
 	-webkit-transition: all 0.3s cubic-bezier(0.52, 0.08, 0.28, 2.52);

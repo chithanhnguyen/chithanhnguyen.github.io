@@ -6,7 +6,7 @@
 	--bg-color-2: rgba(0, 0, 0, 0.025);
 	--hyperlink: rgba(0, 0, 0, 0.05);
 	--hover: rgb(120, 120, 120);
-	--nav: rgba(255, 255, 255, 0.75);
+	--nav: rgba(255, 255, 255, 0.9);
 }
 
 [data-theme="dark"] {
@@ -15,10 +15,11 @@
 	--font-color: rgb(252, 252, 252);
 	--bg-color: rgb(21, 21, 21);
 	--bg-color-2: rgba(255, 255, 255, 0.05);
-	--hyperlink: rgba(255, 255, 255, 0.1);
+	--hyperlink: rgba(255, 255, 255, 0.25);
 	--hover: rgb(120, 120, 120);
-	--nav: rgba(21, 21, 21, 0.75);
+	--nav: rgba(21, 21, 21, 0.9);
 }
+
 
 html {
 	background: var(--bg-color);
