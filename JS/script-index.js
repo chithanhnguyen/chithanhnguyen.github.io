@@ -79,6 +79,20 @@ window.onscroll = function() {
             "transform": "scale(0)",
             "opacity": "0"
         });
+        $(".navigation").css({
+            "padding": "2rem 0"
+        });
+    } else if (currentScrollPos < 525) {
+        $(".navigation").css({
+            "top": "0",
+            "padding": "0.5rem 0",
+            "background-color": "",
+            "backdrop-filter": "none"
+        });
+        $(".logo").css({
+            "top": "1rem",
+            "transform": "scale(0.75)"
+        });
     } else {
         $(".scroll").css({
             "transform": "scale(1)",
@@ -106,13 +120,6 @@ window.onscroll = function() {
             });
             $(".logo").attr("href", "https://chithanhnguyen.github.io/");
             $(".logo").html("<p class='extrabold'>Home &#x1f448</p>");
-        }
-        if (currentScrollPos < 525) {
-            $(".navigation").css({
-                "padding": "2rem 0",
-                "background-color": "",
-                "backdrop-filter": "none"
-            });
         }
     }
 
