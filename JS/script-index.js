@@ -93,6 +93,8 @@ window.onscroll = function() {
             "top": "1rem",
             "transform": "scale(0.75)"
         });
+        $(".logo").attr("href", "https://chithanhnguyen.github.io/");
+        $(".logo").html("<p class='extrabold'>Home &#x1f448</p>");
     } else {
         $(".scroll").css({
             "transform": "scale(1)",
