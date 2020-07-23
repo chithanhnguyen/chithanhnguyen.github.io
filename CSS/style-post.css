@@ -366,6 +366,7 @@ a {
 }
 
 .button {
+    border-radius: 0.5rem;
     background-color: var(--red);
     font-family: Jost, sans-serif;
     letter-spacing: 0.1rem;
