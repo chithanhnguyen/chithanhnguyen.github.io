@@ -126,6 +126,12 @@ window.onscroll = function() {
     }
 
     prevScrollpos = currentScrollPos;
+
+    $('#home').css({
+        'top': ($(this).scrollTop() / 2) + 'px',
+        'opacity': 1 - ($(this).scrollTop() / 450),
+        'transform': 'scale(' + (4500 - $(this).scrollTop()) / 4500 + ')',
+    });
 }
 
 $(document).ready(function() {
