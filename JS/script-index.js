@@ -105,6 +105,14 @@ window.onscroll = function() {
                 "top": "-10rem",
                 "background-color": "var(--nav)"
             });
+            $(".menu").css("margin-left", "");
+            $(".menu > i").attr("class", "fas fa-bars");
+            $(".menu > a").css({
+                "display": "none",
+                "opacity": "0"
+            });
+            $(".logo").css("display", "");
+            menuExpanded = false;
             $(".logo").css({
                 "top": "0rem",
                 "transform": "scale(0.75)",

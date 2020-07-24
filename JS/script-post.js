@@ -32,6 +32,13 @@ window.onscroll = function() {
             $(".navigation").css({
                 "top": "-10rem",
             });
+            $(".menu").css("margin-left", "");
+            $(".menu > i").attr("class", "fas fa-bars");
+            $(".menu > a").css({
+                "display": "none",
+                "opacity": "0"
+            });
+            $(".logo").css("display", "");
         } else {
             $(".navigation").css({
                 "top": "0",
