@@ -333,6 +333,10 @@ a {
         margin: 0 auto 3rem auto;
         width: 90vw;
     }
+    footer {
+        padding-top: 0;
+        padding-bottom: 5rem;
+    }
     .desktop {
         display: none;
     }
